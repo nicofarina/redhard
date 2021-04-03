@@ -1,0 +1,766 @@
+* { /*Valor universal*/ /*Valor universal*/ /*Valor universal*/ /*Valor universal*/
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; /*Para que las cajas mantengan el tamaño selecionado y no se agreguen el border y el panding*/
+    font-family: "roboto";
+}
+
+
+
+
+/*HEADER*/ /*HEADER*/ /*HEADER*/ /*HEADER*/  /*HEADER*/ /*HEADER*/  /*HEADER*/ /*HEADER*/  /*HEADER*/ /*HEADER*/
+
+nav { /*65 de alto tiene*/
+    justify-content: space-between;
+    background-color: #26316C;    
+    border-bottom: solid 1px #031744;
+    display: flex;    
+    align-items: center;
+    position: fixed;
+    width: 100%;        
+    z-index: 9999999; /*Eje z, para poner por encima del resto de los elementos, núnmero exagerado para que nada lo supere por error */
+}
+
+.nav__img--container {
+    width: 50px;
+    overflow-x: hidden;
+}
+
+.nav__img {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.nav__links {
+    display: flex;     
+}
+
+.nav__a--header {
+    color: #EBEFF2;
+    font-size: 15px;
+    margin: 0 15px;
+    text-decoration: none;   
+}
+
+.nav__a--header:hover { /*Para cambiar el color cuando paso el mouse por arriba*/
+    color: #F28F00; 
+    transition: all 0.2s;
+    transform:scale(1.02, 1.02);
+}
+
+
+
+
+
+/*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/ /*FOOTER*/
+
+footer {
+    background-color:#26316C;
+    padding: 35px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer__titulo1 {
+    color: #EBEFF2;
+    font-size: 15px;        
+    margin-bottom: 20px;
+}
+
+.footer__imagen {
+    display: flex;    
+    margin-top: 10px;
+    align-items: center;       
+}
+
+.footer__imagen img {
+    filter: invert(1); /* Invierte el color */
+    height: 25px;
+}
+
+.footer__texto {
+    color: #EBEFF2;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.footer__redes img {
+    margin-left: 20px;
+    margin-top: 12px;    
+    height: 25px;
+}
+
+.footer__redes img:first-of-type {
+    margin-left: 0;
+}
+
+.footer__redes img:hover {
+    transition: all 0.5s;
+    transform:scale(1.2, 1.2);
+}
+
+
+
+
+/*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/
+
+.section__1 {
+    background-image: url(Imagenes/imagenfondoindex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border-bottom: solid 1px #EBEFF2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.section__1--titulo {
+    color: #26316C;
+    font-size:  60px;         
+}
+
+.section__1--subtitulo {
+    color: #F28F00;       
+    font-size: 35px;    
+}
+
+.section__2 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: -80px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.titulo_section_2--article{
+    color:#F28F00;
+    font-size: 30px;
+    margin-bottom: 10px;    
+}
+
+.section__2--article {
+    background-color: #EBEFF2;
+    border: solid 3px;
+    border-color: #26316C;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+}
+
+.section__2--article1--texto {
+    color: #031744;   
+}
+
+.section__2--img {
+    width: 30%;
+    max-width: 130px;      
+}
+
+
+/*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/ /*NOSOTROS*/
+
+
+.sectionnos__1 {
+    padding-top: 65px;   
+    background:#EBEFF2;
+    background: linear-gradient(to right,  #EBEFF2, rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       
+}
+
+.sectionnos__1--titulo {
+    color: #26316C;
+    font-size: 50px;
+    padding: 0;               
+}
+
+.sectionnos__1--texto {
+    color: #031744;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10%;     
+}
+
+.grid {        
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+
+.grid img { 
+    width: 100%; 
+}
+
+.sectionnos__2--titulo {
+    color: #F28F00;
+    font-size: 20px;    
+}
+
+.sectionos_2--texto {
+    color: #031744;
+    font-size: 15px;    
+}
+
+
+
+/*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*NO TIENE DESAROLLO EN CSS MÁS QUE UNA VIEJA PRUEBA CON COLORES*/
+
+
+.sectioncontac {
+    background:#EBEFF2;
+    background: linear-gradient(to right,  #EBEFF2, rgb(255, 255, 255));    
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-row-gap: 10px;    
+}
+
+section {
+    padding: 90px 20px 50px 20px;
+}
+
+.sectioncontac__titulo {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    color: #26316C;
+    font-size: 50px;          
+}
+
+.sectioncontac_div1 {
+    grid-column: 1 / 5;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.sectioncontac_div2 {
+    grid-column: 1 / 5;   
+    grid-row: 4; 
+}
+
+.sectioncontac_div3 {
+    grid-column: 1 / 5;   
+    grid-row: 5; 
+}
+
+.sectioncontac_div4 {
+    grid-column: 1 / 5;   
+    grid-row: 6; 
+}
+
+.sectioncontac_div5 {
+    grid-column: 1 / 5;  
+    grid-row: 7; 
+    display: flex;
+    align-self: end;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+.sectioncontac_div6 {
+    grid-column: 1 / 2;  
+    grid-row: 8;
+    align-self: end;
+}
+
+.sectioncontac_div7 {
+    grid-column: 2 / 3;
+    grid-row: 8;
+    align-self: end;
+}
+
+.sectioncontac__inputs {
+    width: 100%;
+    height: 100%;    
+    font-size: 16px;
+    border: solid 3px;
+    border-color: #26316C; 
+    border-radius: 5px;
+    padding: 1em 2em;
+}
+
+.sectioncontac__inputs:focus {
+    font-size: 23px;
+    color: #031744;    
+}
+
+.sectioncontac_div5--pregunta {
+    font-size: 20px;
+    color:#26316C; 
+    padding-right: 20px; 
+    align-self: center; 
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;    
+}
+
+.enviarconsulta {
+    width: 50%;
+    color:#EBEFF2; 
+    background-color: #26316C;
+    box-sizing: content-box;
+    height: 30px; 
+    border-radius: 5px;   
+    font-size: 20px;
+    padding: 1em 2em;
+}
+
+.limpiardatos {    
+    width: 50%;       
+    background-color: #26316C;
+    color:#EBEFF2; 
+    box-sizing: content-box;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px; 
+    padding: 1em 2em;        
+}
+
+.limpiardatos:hover {
+    color:#F28F00;
+    transition: all 0.2s;
+    transform:scale(1.02, 1.02);   
+}
+
+.enviarconsulta:hover {
+    color:#F28F00;
+    transition: all 0.2s;
+    transform:scale(1.02, 1.02);
+}
+
+.service__header {
+    padding-left: 20px;
+}
+
+.service__header h1 {
+    font-size: 3em;
+    color: #26316c;
+    margin-bottom: .4em;
+}
+
+.service__header h2 {
+    padding-bottom: 5px;
+    color: #f29120;
+    font-size: 1.5em;
+}
+
+/* SERVICIOS */
+li {
+    list-style: none;
+    padding: 1em 0;
+    padding-left: 1.5em;
+}
+
+li:nth-child(2n+1) {
+    background-color: #26316c;
+    color: white;
+}
+
+li:nth-child(2n) {
+    color: #26316c;
+}
+
+.service {
+    color: #26316c;
+    font-size: 3em;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.service-p {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f29120;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+
+@media screen and (min-width: 700px) {
+    .nav__img--container {
+        width: auto;
+        margin: 0 20px;
+    }
+    
+    .nav__img {
+        height: 50px;    
+        padding: 0;
+    }
+
+    .section__2 {
+        flex-direction: row;
+    }
+
+    .section__2--article {
+        width: 25%;
+        margin: 0;
+    }
+
+    footer {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .footer__redes img {
+        margin-top: 0;
+    }
+
+    .sectionnos__2--titulo {
+        color: #F28F00;
+        font-size: 35px;    
+    }
+    
+    .sectionos_2--texto {
+        color: #031744;
+        font-size: 20px;    
+    }
+}
+
+@media screen and (min-width: 900px) {
+    section {
+        padding-top: 130px;    
+    }
+
+    .nav__a--header {
+        font-size: 23px;
+        margin: 0 20px;    
+    }
+
+    .nav__img {
+        height: 65px;
+    }
+
+    .sectionnos__1 {
+        padding-top: 100px;   
+    }
+
+    .grid {
+        gap: 20px;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+AYUDAS MEMORIAS
+
+Manejar tamaños y posición:
+(top; right; bottom; left) - Usando esta forma sin declarar el valor funciona.
+margin
+panding
+border
+A su vez si ponés por ejemplo margin: 0 1rem; el cero aplicar por los márgenes de arriba y abajo y el 1em por los de derecha y izquierda.
+max-widht: 900px; - Estoy declarando que el ancho máximo es de 900px
+margin: 0 auto; (el 0 se declara el arriba y abajo y no declara un margen y el auto hace que automáticamente los márgenes de izquierda y derecha se dividan en dos. Con esto puede centrar si usar flex.
+abajo está explicado el min-heigth que establece el mínimo pero que si tiene que crecer le dice que crezca lo que necesite.
+
+width - ancho - pueden ser tanto en px como en porcentajes por ejemplo
+height - alto - pueden ser tanto en px como en porcentajes por ejemplo
+height 100%vh - se refiere al 100% de la ventana, porque el body tiene un heigt asignado de 0% y suele ser un problema normal cuando el padre es el body. El body por defecto no tiene altura
+El % en las unidades de medida siempre va en relación al padre.
+
+rem = 16px ---- por tanto al poner margin: 2rem; el margen sería 16x2 que da 32px. 
+
+Si el contenido de una caja se desborda:
+overflow: hidden; (Cuando se te desborda un texto dentro de algún elemento contenedor, lo que hace es cortarlo al limite de la caja
+overflow: scroll; (En este caso lo que hace es crear una barra para poder hacer sroll en ese elemento contenedor)
+min-height 300px; El alto mínimo será 300, pero si es más lo que hace es automáticamente crecer para que lo contenido no se desborde.
+
+display inline (linea) o block (bloque)
+display: inline-block; Pone a un bloque en línea. 
+Cundo tenemos elementos inline los márgenes superiores e inferiores no aplican aunque los modifiquemos. 
+
+display: flex; - Se aplica al elemento padre - A los eElementos contenor - tiene como predeterminado el valor "row" (fila) por los que nos alinea los elementos contenidos en de forma horizontal
+flex-direction: colum - Para alinear de forma vertical.
+El navegador le asgina flex-direction: row; por defecto (horizontal).
+row-reverse o column reverse, ordena los elementos de forma invertida. 
+
+flex-wrap: no-wrap; - Este es valor por defecto, y le dice que si los elementos de una caja contenedora, por ejemplo un nav, se tienen que desbordar pero respetando la linea, que se desborden.
+flex-warp: wrap;. - En este caso se le aplica el wrap para que los elementos no se desborden. Permite generar multilineas en caso de que sea necesario.
+flex-flow: - Esta sola propiedad manipula las dos propiedades al mismo tiempo de los direction y el warp. Ejemplo: flex-flow: colum; wrap;
+
+justify-content: - el valor por defecto es el "flex-start" - 
+si lo queremos centrar, el valor sería "center", 
+"flex-end" se alinea al fondo del contenedor, 
+"space-between" no sólo los alínea y posiciona los elementos en los extremos sino que los distribuye uniformemente, 
+"sapace-around", con espacios a los costados a diferencia del anterior, en sí te suma los espacios de cada enlace de forma exacta por cada lado de cada elemento contenido, 
+"space-evenly" en este caso deja proporsiónn entre cada espacio, por tando el espaciado entre elementos es igual tanto en los márgenes así como entre los elementos a diferencia del aterior.
+
+flex-basis: 30%; En este caso se usa para asignarle un porcentaje a por ejemplo un conjunto de 3 cajas que están contenidas en otra que sería el 100%, y así si fueran 3 tendrían un 30% de tamaño sin importar su cotenido, y quedaría un 10% de la caja contenedora para espaciar por ejemplo.
+A su vez, cumple el rol del widht: 30%; o heigth;30% - Y esto dependiendo si trabajamos en filas o columnas. en el caso de flex-basis actual por defecto sin importar en qué estamos trabajando.
+
+aling-items: tiene valor por defecto "strech" - En este caso trabaja con el eje secundario (si estoy con row el eje principal es el horizontal y el secundario el vertical, y alrevez en columna).
+
+aling-content - Solo se usa para alinear contenido multilinea que va a existir cuando trabajemos por ejemplo con wrap, y esto alinea el conjunto de lineas (no se usa mucho).
+
+position: fixed; - Adecua por ejemplo el nav al tamaño de su contenido, por ejemplo los enlances. 
+Además a hacer el scrool el menú nos va a seguir.
+Por tanto lo que se pone es width 100% para que el background del nav ocupe la totalidad del espacio.
+botton: 0; si queremos que quede fijado abajo. 
+
+
+grid-template-columns: ; - Lo que permite a al elemento padre es decirle cuántas columnas quiero que tenga pero en relación al tamaño, sean px, % o auto.
+Al usar 1fr (fr significa fracción), que sólo existe cuando usamos grid, como unidad de medida lo que estamos haciendo es diviendo el espacio es fraciones por igual, si ponemos 3 serán tres, si ponemos 4 serán 4. 
+grid-template-columns: repeat(3, 1fr); - Es una forma de decirle que nos repita 3 columnas con 1fr de tamaño (Las fr son responsive, ya que siempre trata de dividir por igual)
+grid-template-row: ; - Fila, funciona igual que el colunm
+
+gap: 10 px; - Es un espaciado, en este caso, entre columnas y entre filas. aplica 10 px
+grid-column-gap: ; - Espaciado entre columnas
+grid-row-gap: ; - Espaciado entre filas.
+
+grid-colum: 1 / 13; en este caso estoy diciendo que quiero que tal elemento ocupe el tamaño de las columnas 1 a las 13.
+grid-row: ; - Se repite lo mismo de arriba.
+
+grid-template-areas: - Se utiliza para detallar nuestras columnas y filas en función de los nombres que le hayamos asginado
+Ejemplo: De esta manera literalmente estoy armando mi cuadrilla a partir de los nombres (clases/elementos) asignados.
+grid-template-areas: 
+"nav header header"
+"nav prodcutos publicidad"
+"nav productos publicidad"
+"nav footer footer"
+Luego de esto iría en cada propiedad por ejemplo:
+.nav {
+grid-area: nav;
+}
+
+
+Rsponsive
+Mobile Firts - Reponsividad - Arrancar primero en que se vea bien el celular. Es una guía a seguir.
+Trabajamos todo nuestro css con vista mobile y después le agregamos media queris (@media) tanto para tablet, pc y etc.
+Para hacer esto tenemos que establecer un estilo y necesitaríamos incluir media queries, por ejemplo:
+@media screen and (min-widht: 768px) - El "@" aplica la media queries y el "and" en este caso declara un mínimo de tamaño
+Si no colocamos "screen" el valor por defecto es "all" (para todos los dispositivos); screen dice que es para pantallas, pero existe el valor "print" donde declaramos que los estilos se aplican cuando el material se vaya a imprimir; "spech" es para sintetizadores de voz.
+    .body {
+        background-color:
+    }
+El ejemplo anterior aplica a tablets y compus de escritorios de tamaño reducido. 
+El tipo dipositivo lo detecta automáticamente el navegador y lo que nosotros le decimos desde que tope mínimo de tamaño debe aplicar tal estilo
+
+Dispositivos: mobile / tablet / escritorio.
+
+Otro ejemplo con otra función:
+@media (max-widht: 600px) { - En este caso estoy declarando que cuando tenga un máximo o menor de esto x clase no se muestre
+    .clasex {
+        display: none;
+    }
+} 
+
+and (orientation:landscape) - Si agregamos en el and y en esta caso un landscape estamos diciendo que el @media se aplique sólo cuando el dispositivo se encuentre en horizontal
+Por tanto no sólo se va a modificar en relación al tamaño sino dependiendo de la orientación del dispositivo.
+
+Gradientes
+https://uigradients.com/#IbizaSunset - Para generar un gradiente para el color de fondo
+https://cssgradient.io/
+background: linear-gradient(to right; acá irían los colores, de cual a cual ) - En este caso es un gradiente que va linea, ya sea horizontal o vertical, por ejemplo podríamos hacerlo to bottom
+background: gradial-gradiant - Es otro efecto de gradiente y parece como un círculo, no lineal.
+background-image: linea-gradient (left, red, yellow) - En este caso a una imagen le agregamos un gradiente y ese colores.
+
+
+Transformaciones
+transform:translate(10px, 20px);  - Lo que estoy declarando es un movimiento del tal elemento 10 px en el eje horizontal y 20 en el vertical. Queda fijo, no es que va y viene.
+transform:rotate(45deg) - Nos permite girar un objeto sin modificarlo. - "deg" unidad de medida que hace referencia a grado. "180deg" daría una vuelta completa.
+rotatex y rotatey - el primero solo lo rota en el eje x y el segundo solo en el y.
+En la misma transform puede agregarle distintos valores, como traslate o rotate.
+transform:scale () - Cambia la escala del objeto como si fuera un zoom. Labura en eje x e y. Valores mayores a 1 agrandan, entre 1 y 0 achican.
+
+"Animación" - si lo anterior le agrego la propiedad trasition, hago que cuando por ejemplo pase el mouse se realice la transformación
+Ejemplo:
+div {
+    widht: 100px;
+    heigth: 100px;
+    background-color: red;
+    transition: all 3s;
+}
+div:hover {
+    transform:translate(10px, 20px);
+}
+Si uso la propiedad transition ocurre de manera gradual, sino no la uso me realiza la modificación planteada de un saque.
+Podemos modificar el height, el width, 
+
+opacity - Tiene valor por defecto 1, si yo en una transición pongo opacity 0, va a hacer una transición hasta desaparecer.
+
+
+ Usar el imput:focus - cuando me posiciono dentro del imput crece para poder escribir mejor
+Ejemplo:
+.imput:focus {
+    widht: 100px;
+    font-size: 22px;
+}
+
+Animación
+A diferencia de la transición no ocurre en base a un evento, ocurre automáticamente y se repite las veces que queramos
+El elemento va a ocurrir desde el momento en que carguemos la páginas. Si tenemos infinita el que entra la podrá ver, si se activa 5 veces, y no la ve el que entra despues de las 5 deja de salir.
+@keyframes + un nombre relación a la animación que quiero hacer.
+@keyframes efecto_1 {
+    }
+Se laburo generalmente con porcentajes, arrancando del 0% hasta llegar al 100 por ejemplo. En el sentido, el 25% pasa tal cosa, en el 50% tal otra, y todo atado a un tiempo que detellemos.
+
+ejemplo:
+@keyframes un_efecto {
+   0%{ width: 100px; }
+   25%{ width: 300px; }
+   50%{ width: 200px;
+     background-color: red; }
+   75%{ width: 300px;}
+   100%{ width: 100px;
+     background-color:green;
+}
+Y luego en el mismo css vamos vinculando la animación al elemento que quermaos
+section {   
+   animation-name: un_efecto;
+   animation-iteration-count: infinite; - Cúanto tiempo se repetirá, en este caso infinitamente, pero podría ser ejemplo 10. 
+   animation-timing-function: ease-in; - Esto detalla la velocidad de la animación, al inicio rápido y al final rápido, por ejemplo
+   animation-duration: 2s; - Duración (Se relaciona directamente con el porcentaje que declaramos en la animación, si es 50% y declaramos 2 segundos, por tanto se aplicaría al segundo 1 de los 2, ya que es la mitad, el 50%)
+   animation-delay: 10s; - Esto es cuánto tarda en ejecutarse, pero va al inicio solamente, no cada vez que arranca.
+}
+Además del porcentaje podemos usar las propiedades "from" y "to", desde a qué cosa sería. 
+
+Otro ejemplo copado, es el de aparecer y desaparecer que se logra con el "opacity", en este caso un h1.
+@keyframes aparecer {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+h1 {
+   animation-duration: 2s;
+   animation-name: aparecer;
+   animation-iteration-count: infinite;
+}
+
+https://animate.style/
+Acá hay una librería con clases definidades de efectos, pero que tenemos que vincular (en pdf de la clase 8 y 9 está descripto)
+
+
+mdm + css... en google para todas las dudas
+
+
+GIT
+
+Git Bash
+Algunos comandos
+git config --list - Para ver nombre de usuario, email declarado y demás datos.
+HELP: te mostrará una lista de comandos disponibles.
+DIR / LS: es el comando más conocido de DOS y sirve para ver el contenido de una carpeta (en MAC-OS usar LS).
+CD: sirve para entrar en una carpeta o salir de ella (CD ..). Por ejemplo, la busco con dir, y después utilizo cd para entrar en un carpeta y luego que estoy dentro uso nuevametne dir para ver que hay dentro de esas carpeta.
+ej: cd proyecto/  ---- cd .. (para volver atrás)
+También puedo arrastrar una carpeta y me coopia la ruta de esa carpeta
+CLEAR: limpia la consola. Es lo mismo que ejecutar ctrl + tecla l
+MKDIR: con este comando crearás una carpeta nueva. Con RMDIR podrás eliminarla.
+MOVE y COPY: son los comandos para mover y copiar archivos respectivamente. hay que indicar el nombre del archivo con su ruta (si está en otra carpeta en la que te encuentras) y la ruta de destino.
+RENAME: sirve para renombrar un archivo o carpeta. Hay que indicar el nombre original y el definitivo.
+DEL: es el comando para eliminar un archivo. No irá a la Papelera. Y para eliminar carpeta el comando RD.
+EXIT: cierra la ventana de la línea de comandos o símbolo del sistema.
+COPY CON: crear archivos (en MAC-OS usar TOUCH).
+
+git init - para inicializar git en la carpeta que estemos trabajando. Automáticamente nos genera una carpeta oculta que se llama .git (que no se toca)
+Y lo identificamos cuando al lado de la carpeta dice (master)
+ls -a (nos muestra las carpetas ocultas)
+Al realizar el enlace en el visual se ven ahora con color verdes nuestro html carpetas y demás, y se nos agregó un link de vínculo, que dice significa que todo está enlazado con git. A su vez tienen una "A" al lado
+Cuando tienen una "M" al lado sinifica que fueron modificados y que tenemos que realizar el git add de nuevo. También cambian de color verder a una especie de naranja
+
+git status (para revisar el estado de nuestro repositorio, lo que estoy trabajando en el "working directory")
+
+git add  - Agregar el o los archivos al "Staging Area".
+git add + el nombre del archivo, lo cual permite adherir el archivo para subirlo luego al repositorio en la nube. 
+git add .    -  Adhiere todos los archivos nuevos.
+Y con git status ya puedo corroborar si está en el nuevo estado (todavía no está en el estado commit)
+
+git commit
+git commit -m " "  -  El mensaje que quiere agregarle “Comentario de qué se trata el commit que se está realizando, el mensaje que quiere ”
+
+git log
+Para ver cuando confirmé los commit - muestra el registro de los commits
+git log --oneline   ---- Es una forma resumida de ver los commits
+
+ramas
+Las ramas sirven para trabajar en equipo y sin hacer modificaciones en el master, y si algo se daño la master queda intacta. Obviamente a estar algo ya realizado y en funcionamiento lo vamos pasando a la master
+git branch + el nombres que le quiera dar, por ejemplo: git branch prueba1 para armar una nueva rama
+Cuando queramos agregar una nueva funcionalidad, o solucionar un error, podemos generar una nueva rama para alojar estos cambios y así organizarnos mejor y hacer por ejemplos correciones experimentales
+Si ejecuto sólo git branch sin nombre ni nada me dice en que rama estoy; en sí se usa git branch -l
+
+cambio de rama a otra
+git checkout + nombre + para cambiar de rama
+
+borrar la rama
+git checkout + nombre  --- para volver a la rama principal (la que llama master)
+$ git branch -D prueba1  --- lo que hace es borrar la rama (ojo que la "D" va en mayúscula cuando hay que borrar)
+
+cambiar nombre de una rama
+git branch -m nico  ----- estando dentro de una rama, por ejemplo llamado prueba, y agrego esto le cambio el nombre a nico.
+
+Para moverme a un commit viejo, porque me equivoqué y quiero revisar o lo que sea
+git checkout 6bcff19 ---- (esto último es un ejemplo, y es el id del commit que los busco con el git log)
+Pero acá hay que tener cuidado, yo hago un nuevo commit está dentro del id donde me moví todos los commit posteriores se me van a borrar automáticamente
+Y para voler sería git checkout + nombre de la rama que incluye todos los commit
+
+Trasladar los cambios de una rama "x" a la rama master
+git merge
+Primero nos tenemos que ubicar en la master
+git merge + nombre de la rama que quiero unificar con la master
+ejemplo:
+git merge prueba1
+Pero esto no hace que se borre prueba1, de hecho puedo volver a ella y seguir trabajando, lo que se copió fue lo que había trabajado hasta ese momento
+o puedo elimilar con git branch -D prueba1
+
+Elminar los commit pero no el contenido
+git reset + id del commit
+Los commit después de ese id se borra, pero no el contenido en el código, de alguna manera borro los comentarios.
+
+git reseet --hard + id del commit
+En este caso borra el commit y todo el contenido
+
+Mi primir commit puede ser: "Archivo princial del proyecto Redhard", en el master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
