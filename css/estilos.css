@@ -108,7 +108,7 @@ footer {
 /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/ /*INDEX*/
 
 .section__1 {
-    background-image: url(Imagenes/imagenfondoindex.jpg);
+    background-image: url(../Imagenes/imagenfondoindex.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -292,8 +292,8 @@ section {
 }
 
 .sectioncontac__inputs:focus {
-    font-size: 23px;
-    color: #031744;    
+    font-size: 20px;  
+    color: #26316C;          
 }
 
 .sectioncontac_div5--pregunta {
@@ -307,6 +307,12 @@ section {
     width: 30px;
     height: 30px;    
 }
+
+.checkbox:hover {    
+    transition: all 0.5s;
+    transform:scale(1.05, 1.05);    
+}
+
 
 .enviarconsulta {
     width: 50%;
@@ -453,7 +459,8 @@ li:nth-child(2n) {
         gap: 20px;
     }
 }
-  
+
+ 
 
 
 
@@ -738,28 +745,420 @@ Los commit después de ese id se borra, pero no el contenido en el código, de a
 git reseet --hard + id del commit
 En este caso borra el commit y todo el contenido
 
-Mi primir commit puede ser: "Archivo princial del proyecto Redhard", en el master
+GITHUB
+git remote add origin + link github y nuestro repositorio nuevo ----- Esto para hacer la vinculación
+git remote -v  ----- Es para corroborar cuando hicimos la vinculación con github
+git push -u origin master ----- Para hacer la vinculación con github, en este caso con master
+Si quiero subir una rama (aunque es raro) tengo que poner en vez de master el nombre de la rama
+
+Descargar repositorios de github
+Copiamos la url del repositorio abrimos el git bash y ponemos:
+git clone + la url ---- y se descarga
+
+Mi primir commit puede ser: "Archivo principal del proyecto Redhard", en el master
+
+Como colocar git bash en mi editor
+Para agregar la terminal de git bash en el visual estudio hay que ir a settings y arriba a la derecha hay un ícono para clickear que parece una hoja y que si dejamos el mouse arriba dice "open settings .json"
+y tenemos que agregar la siguiente línea: "terminal.integrated.shell.windows": "c: bla bla la dirección del bash.exe dentro de git.(donde está instalado)"
 
 
 
 
+BOOTSTRAP
+https://getbootstrap.com/
+Librería: Colecciones de códigos que alguien ya hizo (sean públicas, privadas, o nuestras). Cualquier código que alguien ya haya hecho y que podemos usar. En definitiva son herramientas y las utilizamos de acuerdo al proyecto que tengamos.
+Bootstrap nos trae librería pero a su vez es un framework.
+Bootstrap tiene, entre otras cosas, un montón de clases de css que son gratis y que podamos usar para nuestros proyectos.
+bootstrap utiliza un sistema de filas y columnas, exactamente de 12 (por ser un númermo que permite dividir por 2, por 3, por 4, por 6, por 12 y 1). 
+
+Como insertar bootstrap (primera opción - Copiar CDN)
+Se pega en el head
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+Luego estos dos se pegan dentro del boody y justo al final de todo (son para los componente dinámicos)
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+Como insertar bootstrap (segunda opción)
+En este caso se descargan los archivos de bootstrap y los linkeamos desde adentro. Y podemos hacer algún cambio en la libería por ejemplo porque la tenemos nostros.
+
+Algunos ejemplos de clases de bootstrap:
+class="" (por ejemplo dentro de un section)
+container (pone todo en un contedor y lo centra, y a su vez lo hace responsive)
+container-flui (pone el contenedor al 100% del espacio en caso de que lo necesite)
+img-fluid (los elementos no se pasan y dejan de generar scroll cuando achicamos por ejemplo, lo hacen tambien responsive)
+lead (para destacar el primer párrafo, estilo en una noticia, con más interlineado y tamaño)
+row (los elementos dentro de un row van a ocupar 12 columnas. La clase row nos permite usar las columnas. Le pone flex y flex wrap y corrige el margim que modifican las columnas)
+col-2 (el 2 puede ser el número que queramos, y detalla cuántas columnas quiero de cada uno).
+No poner ningún breakpoint define desde mobile para arriba
+responsive
+declarás col- "sm" o "md" "lg" y "xl" y después cantidad de columnas. Con esto declarás dentro de tales tamaño cuantas columnas tal elemento.
+Ejemplo: class="col-sm-9 col md-7"
+col (si dejo col sólo le doy un tamaño flexible a uno de los elementos, por ejemplo si tengo dos section una al lado de la otra, en una puedo declarar modificaciones de responsividad en función de cant de col, pero en el otro poniendo sólo col lo adapta automáticamente)
+Tambien si pongo col a cada elemento de una section sin declarar la columna me va a dividir los elementos del mismo de manera proporcional automáticamente.
+Si pongo class:"row no-gutters" a la section que tiene ese col borra los gutters que divid los elementos (espacio en blanco)
+Si declaro col-sm si detallar cantidad de columnas, le digo que es flexible a partir de sm.
+si uso d-md-none, estoy declaron en este caso que display después de md nome, que no aparezca. 
+Puedo traer un background por ejemplo, o un color de texto declarado en css y ponerlo dentro de una clase, por ejemplo en un section puedo tener una class:"bg-red"
+En general las clases son las reglas del css con guiones por ejemplo: class="font-wight-bold"
+
+class="carousel slide" (aviso que voy a usar un carousel) data-ride="carousel" (avisa a java que es carousel y que lo tiene que animar)
+Ejemplo: 
+<div id="calesita" class="carousel slide" data-ride="carousel">
+    <div class= "carousel-ittem active" (declara cada iten del carpusel y active declara por cual va a empezar)> 
+        </img src="(traer una imagen)" class="d-block(declaro que es block) w-100(declaro que ocupe el 100)">. 
+    </div>
+</div>
+
+Acá ejemplo para agregar flechitas y mover nosotros
+  <a class="carousel-control-prev" href="#calesita" (llamo a mi id) role="button" (el rol es para avisar a los no videntes y robots que es un botton) data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span> (el área hidden y el span que sigue abajo es todo para lectores de pantalla para gente con problemas visuales), se peude borrar)
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#calesita" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+Podría estár así y funcionaría
+    <a class="carousel-control-prev" href="#calesita ata-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#calesita"  ata-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+Esto es para agregar indicadores (las barritas abajo que te marcan donde estás) al carusel. irian dentro del div q llamamos calesita
+  <ol class="carousel-indicators">
+    <li data-target="#calesita" data-slide-to="0" class="active"></li>
+    <li data-target="#calesita" data-slide-to="1"></li>
+    <li data-target="#calesita" data-slide-to="2"></li>
+  </ol>
+
+Podemos ir a nuestro css por ejemplo y agregar modificaciones poniendo la clase .calesita , y le cambiamos colores, formas y demás.
+
+bootstrap usa por defecto roboto como tipografía
+
+dropdowns
+ejemplo que dan en la páginas
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+El btn btn-secondary le ponen un estilo para que se vea como un button, pero no es necesario para que funcione, puede ser btn-red. el dropdown-toggle si es necesario
+El type="button" avisa que es un button 
+id="dropdownMenuButton" no es necesario para que funcione pero se usa para detallar que es el padre, péro con el <div class="dropdown"> ya está declarado.
+El aria, es para los no vidente, se puede borrar
+
+Como quedaría borrando todo lo que no es necesario y armando un header de redes sociales:
+<header class="py-3"> (margen)
+    <div class="container">
+        <nav class="nav">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Redes sociales
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Facebook</a>
+                    <a class="dropdown-item" href="#">Instagram</a>
+                    <a class="dropdown-item" href="#">LinkedIn</a>
+                </div>
+            </div>      
+        </nav>  
+    </div>
+</header>
+
+vimos modal
+(la estrcutura viene preestablecida y la saco desde la web)
+Pero es importante no olvidarnos de imbocar en modal, desde donde se va a activar, cuando toque qué cosa. Ejemplo (en este caso s un botón pero lo podemos traer desde donde queramos, una imagen ejemplo):
+<button class="btn btn-outline-primary" (esto es el estilo del boton) data-target="#iddelmodal" (llamo al modar con el nombre del id que le di) data-togel="modal" (declaro que es un modal)>    
+    Nombre del boton
+</button>
+<button class="btn btn-outline-primary" data-target="#iddelmodal"  data-togel="modal"> (ejemplo sin la explicación)    
+    Nombre del boton
+</button>
+modal-lg (es un modal de más tamaño)
+
+Otros estilos que vimos:
+badges 
+popovers
+tooltip
+collapse
+accordion
+cards
+breadcrumb
+
+Hay varios elementos que los tenemos que inicializar, ya que bootstrap los deja por "fuera" para no hacer tan pesada nuestra web. Cómo se hace esto, por ejemplo:
+Hay que armar un nuevo archivo de js en nuestro código por ejemplo con nombre scripts.js
+Dentro de la misma poner lo siguiente en el caso que queramos usas un tooltip
+$(function () {
+    $(*[data-toggle="tooltip"]).tooltip();
+});
+¿Qué estoy declarando?
+$(function () {  (Acá estoy invocando una función anónima en jquery)
+    $ (através del "$" llama, el $ es el alias de jquery (*[data-toggle="tooltip"]) (acá hace un selector de css y llama a todos los elementos que tenga dato-toggle="tooltip") .tooltip() (y acá está diciendo todos ustedes van a ser tooltip);
+});
+
+tehemes
+https://themeforest.net/
 
 
 
+SASS
+Syntactically Awesome Stylesheets - Escribe hojas de estilos sintácticas maravillosas
+Permite una sintaxix más simple.
+Cuenta con dos diferentes tipos de sintaxis, dos maneras de escribir sass, por tanto hay dos tipos de extensiones: .scss (sassy css) y .sass.
+Ejemplo: estilo.scss (esta extensión es prácticamente lo mismo que escribir en css)
+css es el único lenguaje de estilo que entiende el navegador. html es el único que entiende el navegador en el caso de estructuras.
+Por eso al trabajar en sass al terminar lo que hacemos en compilarlo y convertirlo en código css
+El archivo de sass no sew linkea, trabajamos en él y ejecutamos un comando y se convierte en css
+En sass nos permite mejorar nuestro código, por ejemplo, poner un cojunto de elementos dentro de alguna clase, por ejemñplo un div. En vez de tener todos los elementos separados.
+Por ejemplo (en este caso estoy diciendo que sólo a los p que se encuentren dentro de este div se le aplique el estilo detallado en el p, lo que está en el div no afecta al p):
+div {
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   padding: 15px;
+   p {
+       font-size: 20px;
+       color: white;
+       font-family: Arial, sans-serif;
+   }
+}
+en el git para comprobar si instalé node
+node -v (me dice si está instalado y la versión)
+npm -v (me dice si está instalado y la versión)
+
+Después:
+npm init (te pregunta al dar enter cual va ser el nombre del proyecto que vas a crear, si no colocamos nada queda el de la carpeta, y varias preguntas que por el momento le damos enter)
+si damos enter a todo nos va a terminar generando un archivo package.json
+npm install -D node-sass nodemon  (esto hace que nos instalen el "node-sass" (como una librería) y además el "nodemon" (esto nos permite hacer tareas repetitivas)) Y esto hay que instalarlo en cada proyecto que usemos sass.
+Al terminar se nos crea en el visual una carpeta que se llama node_modules (esta carpeta no se toca) y un archivo que se llama package-lock.json
+La carpeta node_modules (no se toca y no la subimos a github, hay un comando para hacer que esto no se haga).
+Luego hay que crear dos carpetas: Una carpeta que se llame SCSS y otra CSS, con sus archivos respectivos. 
+carpeta scss con su archivo "prueba.scss"
+
+Luego editamos el package.json e insertamos dos lineas, agregando "," en el scripts (mientras usemos el nombre "prueba", sino hay que modificar):
+,"build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+"watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+El comando para compilar es el siguiente:
+luego en el git: npm run watch-css (esto va a estar ejecutandose repetivametne gracias al nodemon y evita estemos todo el tiempo dando inicio)
+Al ejecutar el comando genera un archivo css, y lo que hace es compilar el código sass y lo traslada a ese archivo de css. 
+El comando mientras lo hayamos ejecutado siempre que guardemos en el proyecto se va a realizar el cambio. 
+Importante el sass al compilar copia y borra lo que hay en el archivo del css, por tanto hay que tener cuidado. Se sobreescribe y se pisa.
+Cada vez que cierro la terminal se detiene el comando, por tanto cada vez que vuelvo a trabajar tengo que abrir la terminal de git y activar el comando. 
+
+import
+Todos los demas archivos .scss le vamos a agregar el "_" al princpio, por ejemplo, _colors.css
+Y desde el .scss principal lo vinculamos con @import "_colors.scss";
+Es para trabajar con archivos adicionales de sass
+El import nos permite separar distintos códigos para que no queda tan largo y acomodar el proyecto, por ejemplo por ventanas, etc.
+
+vars (variables)
+Es para guardar información en nuestra hoja de estilo de sass que después podemos recuperar
+se utiliza el "$" para declarar una variable
+ejemplo: $color-principal: red; 
+De esta nanera la puedo llamar cuántas veces necesite.
+Y todo esto es válido en sass pero no en css.
+
+"&" Este signo nos sirve para no repetir, y busca al padre más cercano en el sass
+Básicamente es el alias del padre más cercano
+por ejemplo
+.header {
+    width: 500 px;
+    .header header_logo
+        heigth: 60 px;
+        width: 60 px;
+}
+lo convierto en]:
+.header {
+    width: 500 px;
+    .$_logo
+        heigth: 60 px;
+        width: 60 px;
+}
+
+Operaciones 
+sass (sass nos permite realizar operaciones)
+por ejemplo: 
+$ancho: 720px;
+.box_uno {
+    background-color: $blue;
+    width: $ancho / 2; (esto va a dividir ancho por dos, sería 720px/2)
+}
+
+Condicionales
+Nos permite establecer reglas para validar, si esto es así sucede tal cosa - if.
+Estas condiciones podrán incluir comparadores típicos (==, !=, <, >, <=, >=) entre variables, constantes o cualquier expresión intermedia. 
+Ejemplo:
+$animal: gato; 
+p {
+    @if $animal == gato { (si la variable animal es gato se cambia el color a azul)
+           color: blue;
+    } @else if $animal == perro { (en este caso si no lo es pero de lo contrario si es igual a perro es rojo)
+               color: red;
+   } @else if $animal == caballo {
+              color: green;
+   } @else {
+              color: black; (en este caso estamos diciendo de lo contrario, en caso que no se cumpla todo lo anterior, va a ser negro)
+    }
+}
+
+Bucle @for: (para)
+Un bucle es una secuencia que repite más de una vez una porción de código, dada cierta condición. Cuando la misma deja de cumplirse, el bucle finaliza.
+Lo que le tenemos que decir es donde vas a iniciar y donde vas a terminar.
+$var será el nombre de la variable que queramos utilizar en nuestro bloque.
+Tanto <start> como <end> tendrán que ser expresiones SassScript válidas, que devuelvan números enteros. Por último, si indicamos ‘through’ se tendrán en cuenta los valores <start> y <end> dentro del bucle; 
+Si utilizamos ‘to’, no se tendrá en cuenta el valor <end> dentro del bucle. 
+Permite generar cuestiones dinámicas como lo hace cualquier lenguaje de programaciónn y que css no nos lo permite.
+Ejemplo
+@for $i from 1 through 3 {
+  .casitodos-#{$i} { width: 2em * $i; }
+}
+Y en css se genera
+.casitodos-1 {
+   width: 2em;
+}
+.casitodos-2 {
+   width: 4em;
+}
+.casitodos-3 {
+   width: 6em;
+}
+
+Each
+La regla @each facilita la emisión de estilos, o la evaluación del código para cada elemento de una lista, o cada par en un mapa. 
+Es ideal para estilos repetitivos que sólo tienen algunas variaciones entre ellos ya que, de cumplirse un característica, realiza dicha acción.
+Es posible definir una estructura @each de la siguiente manera:
+@each $var in {
+  //Bloque de reglas donde podremos utilizar $var mediante interpolación
+}
+En este caso, <list> será cualquier expresión que devuelva una lista de elementos SassScript válida, es decir, una sucesión de elementos separados por comas.
+Es parecido al for pero en este caso no le decimos numéricamente cuántas veces se tiene que repetir, sino que nombramos los valores y los separamos por ",".  
+Ejemplo:
+@each $animal in puma, aguila, perro {
+   .#{$animal}-icon { (en este caso estoy generando clases con el "." pero podría ser otro "#" y serían ids).
+         Background-image:  
+          url('/images/#{$animal}.png');
+    }
+Y en css se vería:
+.puma-icon {
+   background-image: url("/images/puma.png");
+}
+.aguila-icon {
+   background-image: url("/images/aguila.png");
+}
+.perro-icon {
+   background-image: url("/images/perro.png");
+}
+
+Maps
+Los mapas son variables cuyo valor es una colección de variables. Se definen con un nombre que los identifica. Las claves suelen ser cadenas o números, mientras que los valores pueden ser cualquier tipo de dato. 
+Ejemplo: se necesita crear una serie de botones para compartir contenido y te exigen tres de diferente color. Para no crearlos uno a uno, generas un mapa  con clave “el botón” y valor “el color que tendrá”.
+$map: (key1: value1, key2: value2, key3: value3);
+Ejemplo:
+$redes: (Declaramos nuestro mapa, una variable)
+    twitter:   #55acee, (acá declaramos una alias (la clave) y un valor)
+    facebook:  #3a5795,
+    send-mail: #C25E30
+); 
+(Creamos el bucle para usar los valores del mapa)
+@each $red, $color in $redes {
+    .btn--#{$red} {
+    background-color: $color;
+    }
+}
+Y en css se vería:
+.btn--twitter {
+   background-color: #55acee;
+}
+.btn--facebook {
+   background-color: #3a5795;
+}
+.btn--send-mail {
+   background-color: #C25E30;
+}
+
+Extend
+A menudo, al diseñar una página una clase debe tener todos los estilos de otra clase, así como sus propios estilos específicos. 
+En esos casos usamos @extend, para traer los estilos de otra clase. 
+Permite extender los estilos dentro de otra clase para no andar rescribiendo lo mismo.
+Ejemplo:
+.redsocial {
+        border: 1px #f00;
+        background-color: #fdd;
+}
+.redsocial--nueva {
+        @extend .redsocial;
+        border-width: 3px;
+}
+Y en el css
+.redsocial, .redsocial--nueva {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.redsocial--nueva {
+  border-width: 3px;
+}
+
+Mixins
+Es parecido al extend pero puede recibir argumentos,  los cuales nos permitirán producir una gran variedad de estilos con unas simples líneas.
+Te permiten definir estilos que pueden ser reutilizados en tu proyecto. 
+Cuando hacemos alusión a un argumento estamos haciendo alusión a una función que puede recibir varios argumentos
+Extends para compartir fragmentos de estilos idénticos entre componentes. 
+Mixins para reutilizar fragmentos de estilos que puedan tener un resultado diferente en cada lugar donde los declaremos o ejecutemos.
+Es como una función y la llamamos con el @include
+Ejemplo:
+@mixin sizes($width, $height) {
+   height: $height;
+   width: $width;
+}
+.box {
+   @include sizes(500px, 50px);
+}
+.leo {
+   @include sizes(1000px, 200px);
+}
+Y en el css
+.box {
+      height: 50px;
+      width: 500px;
+}
+.leo {
+      height: 200px;
+      width: 1000px;
+}
 
 
-
-
-
-
-
-
-
+Reglas css - Ejemplo de cómo leer y entender el código
+ul li a (es el selector css, el elemento html que queremos selecionar) { 
+    text-decoration (este sería la propiedad que queremos selccionar): none (sería el valor que le quiero dar a la propiedad);
+    font-size: 16px;
+    color: #444;
+}
 
 
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
